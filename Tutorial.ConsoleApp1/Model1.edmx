@@ -4,48 +4,47 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="StudentTable">
           <Key>
             <PropertyRef Name="RollNo" />
           </Key>
-          <Property Name="RollNo" Type="int" Nullable="false" />
+          <Property Name="RollNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="50" />
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="FullName" Type="varchar" MaxLength="50" />
-          <Property Name="Subject1" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Subject2" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="subject3" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Total" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Per" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Subject1" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Subject2" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Subject3" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Total" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Per" Type="numeric" Precision="18" Scale="2" />
           <Property Name="Res" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="UniversityModelStoreContainer">
           <EntitySet Name="StudentTable" EntityType="Self.StudentTable" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UniversityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="UniversityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentTables" EntityType="UniversityModel.StudentTable" />
+        </EntityContainer>
         <EntityType Name="StudentTable">
           <Key>
             <PropertyRef Name="RollNo" />
           </Key>
-          <Property Name="RollNo" Type="Int32" Nullable="false" />
+          <Property Name="RollNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Subject1" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Subject2" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="subject3" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Per" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Subject1" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Subject2" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Subject3" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Per" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Res" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="UniversityEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="StudentTables" EntityType="Self.StudentTable" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -55,16 +54,16 @@
           <EntitySetMapping Name="StudentTables">
             <EntityTypeMapping TypeName="UniversityModel.StudentTable">
               <MappingFragment StoreEntitySet="StudentTable">
-                <ScalarProperty Name="RollNo" ColumnName="RollNo" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FullName" ColumnName="FullName" />
-                <ScalarProperty Name="Subject1" ColumnName="Subject1" />
-                <ScalarProperty Name="Subject2" ColumnName="Subject2" />
-                <ScalarProperty Name="subject3" ColumnName="subject3" />
-                <ScalarProperty Name="Total" ColumnName="Total" />
-                <ScalarProperty Name="Per" ColumnName="Per" />
                 <ScalarProperty Name="Res" ColumnName="Res" />
+                <ScalarProperty Name="Per" ColumnName="Per" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Subject3" ColumnName="Subject3" />
+                <ScalarProperty Name="Subject2" ColumnName="Subject2" />
+                <ScalarProperty Name="Subject1" ColumnName="Subject1" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="RollNo" ColumnName="RollNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
