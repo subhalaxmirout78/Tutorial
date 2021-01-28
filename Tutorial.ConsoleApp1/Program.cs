@@ -65,8 +65,6 @@ namespace Tutorial.ConsoleApp1
 
             db.SaveChanges();
 
-
-
             var studentlist = db.StudentTables.ToList();
 
             foreach (var item in studentlist)

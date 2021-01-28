@@ -12,7 +12,7 @@ namespace Tutorial.ConsoleApp2
         static void Main(string[] args)
         {
             UniversityEntities db = new UniversityEntities();
-          
+
 
             var sList = new List<StudentTable>();
 
@@ -46,9 +46,9 @@ namespace Tutorial.ConsoleApp2
                 var ans = Console.ReadLine().ToUpper();
 
                 if (ans == "Y")
-                isNewEntery = true;
+                    isNewEntery = true;
                 else
-                isNewEntery = false;
+                    isNewEntery = false;
             }
             while (isNewEntery == true);
 
@@ -64,6 +64,6 @@ namespace Tutorial.ConsoleApp2
                 "\t" + item.Subject3 + "\t" + item.Total + "\t" + item.Per + "\t" + item.Res);
 
             }
-}
+        }
     }
 }
