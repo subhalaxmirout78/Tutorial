@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tutorial.ConsoleApp1
 {
-    class Program
+    class origin
     {
         static void Main(string[] args)
         {
@@ -66,8 +66,21 @@ namespace Tutorial.ConsoleApp1
             db.SaveChanges();
 
             var studentlist = db.StudentTables.ToList();
-
             foreach (var item in studentlist)
+            {
+
+                Console.WriteLine(String.Format("{0} \t {1} \t{2} \t Subject1 : {3} \t Subject2 : {4} \t Subject3 : {5} \t Total : {6} \t Percentage {7} \t Result {8}",
+                    item.FirstName, item.LastName, item.FullName, item.Subject1,
+                 item.Subject2, item.Subject3, item.Total, item.Per, item.Res));
+            }
+
+
+             Console.WriteLine("The Details of Students whose name starts with 'S' ");
+
+            var sl= db.StudentTables
+                .Where(x => x.FirstName.ToUpper().StartsWith("S")).ToList();
+
+           foreach (var item in sl)
 
             {
                 Console.WriteLine(item.FirstName + "\t " + item.LastName +
@@ -75,6 +88,7 @@ namespace Tutorial.ConsoleApp1
                 "\t" + item.Subject3 + "\t" + item.Total + "\t" + item.Per + "\t" + item.Res);
 
             }
+           
 
             Console.ReadLine();
         }
