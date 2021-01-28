@@ -12,8 +12,6 @@ namespace Tutorial.ConsoleApp1
         {
             UniversityEntities db = new UniversityEntities();
 
-
-
             var sList = new List<StudentTable>();
             var isNewEntery = false;
 
