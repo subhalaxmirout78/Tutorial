@@ -72,7 +72,6 @@ namespace Tutorial.ConsoleApp1
                  item.Subject2, item.Subject3, item.Total, item.Per, item.Res));
             }
 
-
              Console.WriteLine("The Details of Students whose name starts with 'S' ");
 
             var sl= db.StudentTables
