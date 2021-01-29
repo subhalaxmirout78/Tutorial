@@ -7,7 +7,7 @@ using Tutorial.ClassLib1;
 
 namespace Tutorial.ConsoleApp2
 {
-    class Program
+    class Original
     {
         static void Main(string[] args)
         {
@@ -62,7 +62,6 @@ namespace Tutorial.ConsoleApp2
                 Console.WriteLine(item.FirstName + "\t " + item.LastName +
                     "\t" + item.FullName + "\t" + item.Subject1 + "\t" + item.Subject2 +
                 "\t" + item.Subject3 + "\t" + item.Total + "\t" + item.Per + "\t" + item.Res);
-
             }
         }
     }

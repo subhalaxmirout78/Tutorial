@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial.ConsoleApp2", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial.ClassLib1", "..\Tutorial.ClassLib1\Tutorial.ClassLib1.csproj", "{A38551F4-32AB-4DE4-956F-D1B9507693ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial.ConsoleApp3", "..\Tutorial.ConsoleApp3\Tutorial.ConsoleApp3.csproj", "{60B91364-DFB0-4603-ACEC-296EF6E51AFF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A38551F4-32AB-4DE4-956F-D1B9507693ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A38551F4-32AB-4DE4-956F-D1B9507693ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A38551F4-32AB-4DE4-956F-D1B9507693ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60B91364-DFB0-4603-ACEC-296EF6E51AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60B91364-DFB0-4603-ACEC-296EF6E51AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60B91364-DFB0-4603-ACEC-296EF6E51AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60B91364-DFB0-4603-ACEC-296EF6E51AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

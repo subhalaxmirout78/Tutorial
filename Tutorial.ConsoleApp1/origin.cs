@@ -67,12 +67,12 @@ namespace Tutorial.ConsoleApp1
             foreach (var item in studentlist)
             {
 
-                Console.WriteLine(String.Format("{0} \t {1} \t{2} \t Subject1 : {3} \t Subject2 : {4} \t Subject3 : {5} \t Total : {6} \t Percentage {7} \t Result {8}",
+                Console.WriteLine(String.Format("{0} \t {1} \t{2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8}",
                     item.FirstName, item.LastName, item.FullName, item.Subject1,
                  item.Subject2, item.Subject3, item.Total, item.Per, item.Res));
             }
 
-             Console.WriteLine("The Details of Students whose name starts with 'S' ");
+             Console.WriteLine("\n The Details of Students whose name starts with 'S' /n ");
 
             var sl= db.StudentTables
                 .Where(x => x.FirstName.ToUpper().StartsWith("S")).ToList();
