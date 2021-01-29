@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60B91364-DFB0-4603-ACEC-296EF6E51AFF}</ProjectGuid>
+    <ProjectGuid>{88EA5DAD-AB6B-460C-9042-8A3917FD3423}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Tutorial.ConsoleApp3</RootNamespace>
     <AssemblyName>Tutorial.ConsoleApp3</AssemblyName>
@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPerson.cs" />
+    <Compile Include="IStudent.cs" />
+    <Compile Include="IUniversity.cs" />
+    <Compile Include="MCAStudent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="University.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Tutorial.ClassLib1\Tutorial.ClassLib1.csproj">
-      <Project>{A38551F4-32AB-4DE4-956F-D1B9507693ED}</Project>
-      <Name>Tutorial.ClassLib1</Name>
-    </ProjectReference>
+    <None Include="StudentDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
